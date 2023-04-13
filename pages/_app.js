@@ -11,7 +11,7 @@ import NextNProgress from "nextjs-progressbar";
 export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
   return (
-    <>
+    <div>
       <Provider store={store}>
         <NextNProgress color="#130017" />
         <ToastContainer
@@ -28,6 +28,6 @@ export default function App({ Component, pageProps }) {
         />
         <Component {...pageProps} />
       </Provider>
-    </>
+    </div>
   );
 }
